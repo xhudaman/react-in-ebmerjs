@@ -1,0 +1,17 @@
+version: "3.7"
+services:
+  ember:
+    tty: true
+    stdin_open: true
+    build:
+      context: ./web
+      dockerfile: Dockerfile
+      target: base
+    restart: on-failure
+    command: sh -c "yarn start"
+    ports:
+      - 4200:4200
+    user: root
+    working_dir: /src/web
+    volumes:
+      - ./web:/src/web:cached

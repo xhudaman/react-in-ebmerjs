@@ -1,0 +1,14 @@
+<h1>@title</h1>
+<form onsubmit={{action "addTask"}}>
+  <div class="form-group">
+    <label>Task Name</label>
+    {{input type="text" class="form-control" value=name}}
+    <small class="form-text text-muted">Enter a name for the task.</small>
+  </div>
+  <div class="form-group">
+    <label>Description</label>
+    {{textarea class="form-control" value=description placeholder="What needs to be done for this task?"}}
+    <small id="taskName" class="form-text text-muted"></small>
+  </div>
+  <button class="btn btn-secondary" type="submit">Submit</button>
+</form>

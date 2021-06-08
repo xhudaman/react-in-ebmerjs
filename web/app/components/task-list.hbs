@@ -1,0 +1,17 @@
+<h1>{{@title}}</h1>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Task</th>
+      <th scope="col">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each @tasks as |task|}}
+    <tr>
+      <th scope="row">{{task.name}}</th>
+      <td>{{task.description}}</td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
