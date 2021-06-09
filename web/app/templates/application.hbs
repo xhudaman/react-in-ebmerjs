@@ -1,3 +1,33 @@
-<React @title='Ember inside of react!' >
-  {{outlet}}
-</React>
+<nav class="navbar navbar-expand-md navbar-secondary bg-secondary fixed-top">
+  <a class="navbar-brand text-light" href="#">
+    Task Tracker
+  </a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarsExampleDefault"
+    aria-controls="navbarsExampleDefault"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <ul class="navbar-nav mr-auto">
+      <li>
+        <a class="mx-2 btn btn-outline-light" href="/tasks">
+          Tasks
+        </a>
+      </li>
+      <li>
+        <a class="mx-2 btn btn-outline-light" href="tasks/new">
+          Add Task
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div class='row'>
+{{outlet}}
+</div>
