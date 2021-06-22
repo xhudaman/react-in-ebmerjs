@@ -30,29 +30,12 @@ let TaskList = ({ tasks, children }) => {
 };
 
 export default class Tasks extends ReactComponent {
-  @tracked testTasks;
-
-  constructor() {
-    super(...arguments);
-
-    this.testTasks = [];
-  }
-
   async didInsertElement() {
     super.didInsertElement(...arguments);
-
-    const data = await fetch('/tasks');
-    console.log(data);
-
     this.renderComponent();
   }
 
   renderComponent() {
-    const testTasks = [
-      { id: 1, name: 'asdfasdf', description: 'asdfafef' },
-      { id: 2, name: 'asdfaasdf', description: 'asdfafef' },
-    ];
-
     this.reactRender(<TaskList tasks={this.tasks} />);
   }
 }
